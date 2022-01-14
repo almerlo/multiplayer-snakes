@@ -13,11 +13,18 @@ public class MyBrain extends Brain {
 	}
 
 	public Direction getDirection(Point head, Direction previous) {
+		//Frutas del mapa
 		List<Point> fruits = info.getFruits();
+
+		//Cuerpo de la serpiente
 		List<Point> snake = info.getSnake();
+
+		//Serpientes enemigas
 		List<List<Point>> enemies = info.getEnemies();
+
+		//Obstaculos del mapa
 		List<Point> obstacles = info.getObstacles();
-		
+
 		// Point head = snake.get(0);
 		Point myNextHead = head.clone();
 		myNextHead.moveTo(previous);
