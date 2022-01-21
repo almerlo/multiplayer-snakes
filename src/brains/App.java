@@ -13,14 +13,11 @@ import java.util.List;
 
 public class App {
     public static void main(String[] args) {
-        // GameMode gameMode = GameMode.BATTLE_ROYALE;
-        GameMode gameMode = GameMode.NORMAL;
-
 		List<Brain> players = Arrays.asList(
 				new MyBrain()
 		);
 
-		GameStudent.start(gameMode, 3, 2, GameDifficulty.NORMAL, new ArrayList<>(), (Brain[]) players.toArray());
+		GameStudent.start(GameMode.NORMAL, 3, 2, GameDifficulty.NORMAL, new ArrayList<>(), (Brain[]) players.toArray());
         // Pueden probar multiples copias de su Brain o varias copias distintas enviado
         // un array en vez del objeto
     }
